@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form action="./HomePage.html" method="post" enctype="multipart/form-data">
+    <div class="container">
+      <label for="username"><b>Username:</b></label>
+      <input type="text" placeholder="Enter your username" name="username" required>
+
+      <label for="fname"><b>First Name:</b></label>
+      <input type="text" placeholder="Enter your first name" name="fname" required>
+
+      <label for="lname"><b>Last Name:</b></label>
+      <input type="text" placeholder="Enter your last name" name="lname" required>
+
+      <label for="gender"><b>Gender:</b></label>
+      <select name="gender" id="gender" required>
+        <option value="">Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="email"><b>Email:</b></label>
+      <input type="email" placeholder="Enter your email" name="email" required>
+
+      <label for="address"><b>Address:</b></label>
+      <textarea name="address" id="address" rows="4" cols="50" required></textarea>
+
+      <label for="phone"><b>Phone Number:</b></label>
+      <input type="tel" placeholder="Enter your phone number" name="phone" required>
+
+      <label for="dob"><b>Date of Birth:</b></label>
+      <input type="date" name="dob" id="dob" required>
+
+      <label for="username"><b>Username:</b></label>
+      <input type="text" placeholder="Enter your username" name="username" required>
+
+      <label for="password"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+
+      <label for="confrmpassword"><b>Confirm Password:</b></label>
+      <input type="password" placeholder="Confirm Password" name="confrmpassword" required>
+
+      <label for="tos"><b>Terms of Service:</b></label>
+      <input type="checkbox" name="tos" id="tos" required> I accept the terms of service.
+
+      <button type="submit">Register</button>
+    </div>
+  </form>
+  <video style="position: fixed; height: 100dvh; width: 100dvw; z-index: -1; object-fit: cover; top: 0; left:0;" id="video-background" autoplay muted loop>
+    <source src="./mylivewallpapers.com-Eula-Genshin-Impact.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+ </video>
+</body>
+</html>

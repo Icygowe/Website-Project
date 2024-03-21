@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #tweetForm {
+            margin-top: 10px;
+        }
+
+        #tweetInput {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #tweet {
+            /* Styles for tweets go here */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Twitter Clone</h1>
+            <button onclick="toggleTweetForm()">New Tweet</button>
+        </div>
+        <div id="tweetForm" style="display: none;">
+            <textarea id="tweetInput" placeholder="What's happening?"></textarea>
+            <button onclick="postTweet()">Tweet</button>
+        </div>
+        <div id="tweets">
+            <!-- Tweets will be displayed here -->
+        </div>
+    </div>
+    <script>
+        function toggleTweetForm() {
+            const tweetForm = document.getElementById('tweetForm');
+            tweetForm.style.display = tweetForm.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function postTweet() {
+            const tweetInput = document.getElementById('tweetInput');
+            const tweetText = tweetInput.value.trim();
+
+            if (tweetText !== '') {
+                const tweetsContainer = document.getElementById('tweets');
+                const newTweet = document.createElement('div');
+                newTweet.className = 'tweet';
+                newTweet.innerHTML = `<p>${tweetText}</p>`;
+                tweetsContainer.appendChild(newTweet);
+
+                tweetInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
